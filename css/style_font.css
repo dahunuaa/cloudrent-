@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../imgs/icon_fonts/icomoon.eot?ckfwm3');
+  src:  url('../imgs/icon_fonts/icomoon.eot?ckfwm3#iefix') format('embedded-opentype'),
+    url('../imgs/icon_fonts/icomoon.ttf?ckfwm3') format('truetype'),
+    url('../imgs/icon_fonts/icomoon.woff?ckfwm3') format('woff'),
+    url('../imgs/icon_fonts/icomoon.svg?ckfwm3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+.icon-folder-open:before {
+  content: "\e92c";
+}
+
+
+.icon-android-create:before {
+  font-size: 17px;
+  content: "\e900";
+  cursor: pointer;
+}
+.icon-android-create:hover {
+  font-size: 17px;
+  content: "\e900";
+  cursor: pointer;
+  color: #39c;
+}
+.icon-ios-compose:before {
+  content: "\e901";
+}
+.icon-ios-copy:before {
+  content: "\e902";
+}
+.icon-ios-eye:before {
+  font-size: 17px;
+  content: "\e903";
+  cursor: pointer;
+}
+.icon-ios-eye:hover {
+  font-size: 17px;
+  content: "\e903";
+  cursor: pointer;
+  color: #39c;
+}
+.icon-ios-trash:before {
+  content: "\e904";
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>汽车订单</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/hdw_order.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+    <style>
+        /*蒙层提示prompt*/
+        .prompt{ width:100%; height:100%; overflow:hidden !important; top:0; color:#666;  background:none;  z-index: 100;}
+        .prompt .closePrompt{ position: absolute; right:10px; top:6px; cursor: pointer}
+        .prompt .content{border:1px solid #9b9b9b;width:500px; position: absolute;top:322px;left:37px;z-index: 9;}
+        .hide {display: none}
+        .fule{width: 100px;height: 20px}
+    </style>
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl" >
+
+
+<div class="btn_handle" style="width: 95vw">
+    <table id="web_user_table">
+        <tr>
+            <!--<td>-->
+            <!--<div class="btn" ng-click="add_data()"><span  class="icon-ios-copy logo"></span><span>创建</span></div>-->
+            <!--</td>-->
+            <td>
+                <div class="btn"  ng-click="del_data()"><span class="icon-ios-trash logo"></span><span>删除</span></div>
+            </td>
+            <!--<td>-->
+            <!--<div  class="btn"  ng-click="edit_data()"><span  class="icon-ios-compose logo"></span><span>修改</span></div>-->
+            <!--</td>-->
+            <td>
+            </td>
+            <td style="width: auto"></td>
+        </tr>
+    </table>
+</div>
+
+<!--弹窗-修改状态-->
+<div class="prompt hide" id="Layer1">
+    <div class="content"style="background: #fff;height: 400px" >
+        <div style="width:500px;background: #39c;height: 25px;line-height: 25px"><span style="float: left"></span><button style="float: right;border: none;background: transparent;color: #ffffff;" ng-click="cancel_status()">关闭</button></div>
+        <table>
+            <tr>
+                <td>订单编号</td>
+                <td ng-bind="modify_data.order_sn"></td>
+            </tr>
+            <tr>
+                <td>修改状态</td>
+                <td>
+                    <select name="status" id="view" style="width: 80px;" >
+                        <option id="quanbu" value="waiting" >待支付</option>
+                        <option  value="waiting_report">等待报价</option>
+                        <option  value="service">服务中</option>
+                        <option  value="complete">已完成</option>
+                        <option value="cancel">已取消</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>价格</td>
+                <td><input type="text" class="fule" ng-model="modify_price"></td>
+            </tr>
+            <tr>
+                <td>备注</td>
+                <td><textarea style="width: 200px;height: 100px"   ng-model="modify_remark"></textarea></td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 80px;text-align: center">
+            <button style="width: 100px" ng-click="doSure()">确认</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button style="width: 100px"  ng-click="cancel_status()">取消</button>
+        </p>
+    </div>
+</div>
+<!--弹窗////-->
+
+<div id="gridbox"  style="width:95vw"></div>
+<div class="kkpager" id="kk_page" style="width: 95vw">
+    <div id="kkpager"></div>
+</div>
+
+
+</body>
+</html>

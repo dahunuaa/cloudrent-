@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/angular.min.js"></script>
+    <script type="text/javascript" src="js/plugins/basePath.js"></script>
+    <script type="text/javascript" src="dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="js/custom/index.js"></script>
+    <style type="text/css">
+        table#web_user_table tr td div{background: none;color: black;margin:0;padding: 0;}
+    </style>
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl">
+<div class="header" style="position: static;">
+    <div class="inner">
+        <div class="logo floatl"><img src="imgs/logo.png" alt=""></div>
+        <div style="float:left;font-size: 16px;margin: 20px;">云租后台</div>
+        <div class="welcome floatr ng-binding">欢迎登录&nbsp;:&nbsp;<u style="cursor: pointer">{{logname}}</u><span  style="cursor: pointer;color:#fff;margin-left: 10px;"  ng-click="out_login()" > 退出</span></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div id="tabbarObj">
+</div>
+<div class="copyRight" style="position: static;">2016江苏恒德东汇集团有限公司    版权所有      苏ICP备18006693号-1</div>
+</body>
+</html>

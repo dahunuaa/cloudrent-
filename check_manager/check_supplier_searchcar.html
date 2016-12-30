@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>汽车订单</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/check_supplier_searchcar.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl" >
+
+
+<div class="btn_handle" style="width: 95vw">
+    <table id="web_user_table">
+        <tr>
+            <!--<td>-->
+            <!--<div class="btn" ng-click="add_data()"><span  class="icon-ios-copy logo"></span><span>创建</span></div>-->
+            <!--</td>-->
+            <td>
+                <div class="btn"  ng-click="del_data()"><span class="icon-ios-trash logo"></span><span>删除</span></div>
+            </td>
+            <!--<td>-->
+            <!--<div  class="btn"  ng-click="edit_data()"><span  class="icon-ios-compose logo"></span><span>修改</span></div>-->
+            <!--</td>-->
+            <td>
+            </td>
+            <td style="width: auto"></td>
+        </tr>
+    </table>
+</div>
+
+<div id="gridbox"  style="width:95vw"></div>
+<div class="kkpager" id="kk_page" style="width: 95vw">
+    <div id="kkpager"></div>
+</div>
+
+
+</body>
+</html>

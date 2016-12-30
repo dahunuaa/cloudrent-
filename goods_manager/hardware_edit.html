@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>汽车订单_add</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/hardware_edit.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl" >
+
+<div class="public">
+    <ul type="none" class="top_list">
+        <li><div><span class="blue right" onclick="JavaScript:history.go(-1);" >返回</span></div></li>
+    </ul>
+    <ul type="none" >
+        <li><div style="width:100% ;background: #f2f2f2">基本信息</div></li>
+        <li><div class="pub_div"><span>类目</span></div></li>
+        <li><input type="text" ng-model="cartype.name"></li>
+        <li><div class="pub_div"><span>品牌</span></div></li>
+        <li><input type="text" ng-model="cartype.goodspinpai"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品名称</span></div></li>
+        <li><input type="text" ng-model="cartype.goodsname"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品型号</span></div></li>
+        <li><input type="text" ng-model="cartype.goodstype"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品条码</span></div></li>
+        <li><input type="text" ng-model="cartype.goodscode"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>材质</span></div></li>
+        <li><input type="text" ng-model="cartype.goodsstyle"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>报警方式</span></div></li>
+        <li><input type="text" ng-model="cartype.warning"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>内存</span></div></li>
+        <li><input type="text" ng-model="cartype.memory"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>GPS精度</span></div></li>
+        <li><input type="text" ng-model="cartype.gpslength"></li>
+        <li><div style="width:100% ;background: #f2f2f2">销售信息</div></li>
+        <li><div class="pub_div"><span>商家商品编码</span></div></li>
+        <li><input type="text" ng-model="cartype.sales_code"   maxlength="30"  placeholder="长度不超过30"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>价格</span></div></li>
+        <li><input  style="width: 68vw" type="text" ng-model="cartype.shopprice">元</li>
+        <li><div class="pub_div"><span class="red">*</span><span>库存</span></div></li>
+        <li><input  style="width: 68vw"  type="text"  ng-model="cartype.kucun">件</li>
+        <li><div style="width:100% ;background: #f2f2f2">商品详情</div></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品标题</span></div></li>
+        <li><input type="text" ng-model="cartype.goodstitle"></li>
+        <!--<li><div class="pub_div"><span class="red">*</span><span>有效期</span></div></li>-->
+        <!--<li><div   style="text-align: left"> 开始<input  type="text"  id="youxiao_star"  style="width: 120px">  结束<input  type="text"  id="youxiao_end"  style="width: 120px"></div></li>-->
+        <li><div class="pub_div"><span>商品卖点</span></div></li>
+        <li><input type="text" ng-model="cartype.goodssell_why"></li>
+        <li><div class="pub_div"><span>促销卖点</span></div></li>
+        <li><input type="text" ng-model="cartype.goodssell_fast"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品图片:请不要上传过大图片，要求无品牌LOGO和其他网站水印</span></div></li>
+            <li>
+                <div>
+                    <input type="file" class="uploadimg">
+                    <input type="file" class="uploadimg">
+                    <input type="file" class="uploadimg">
+                    <input type="file" class="uploadimg">
+                    <input type="file" class="uploadimg">
+                    <div class="uploaddiv"><img src="../imgs/font.png" alt="" /></div>
+                    <div class="uploaddiv"><img src="../imgs/active.png" alt="" /></div>
+                    <div class="uploaddiv"><img src="../imgs/side.png" alt="" /></div>
+                    <div class="uploaddiv"><img src="../imgs/detail.png" alt="" /></div>
+                    <div class="uploaddiv"><img src="../imgs/detail.png" alt="" /></div>
+                </div>
+            </li>
+        <li><div class="pub_div"><span class="red">*</span><span>状态</span></div></li>
+        <li><div style="text-align: left;width: 70vw;margin: 0 auto"><input type="radio" name="yes_no"  ng-click="yes_no(0)">无效<input type="radio" name="yes_no" ng-click="yes_no(1)">生效</div></li>
+        <li><div class="pub_div"><span class="red">*</span><span>商品说明</span></div></li>
+        <li><div style="width: 70vw;height: 300px;border: 1px solid #ccc;margin:  0 auto" id="editorObj"></div></li>
+    </ul>
+    <button  class="button_" ng-click="to_edit()">修改</button>
+</div>
+</body>
+</html>

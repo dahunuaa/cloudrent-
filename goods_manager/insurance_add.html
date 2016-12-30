@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>汽车订单_add</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/insurance_add.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl" >
+
+<div class="public">
+    <ul type="none" class="top_list">
+        <li><div><span class="blue right" onclick="JavaScript:history.go(-1);" >返回</span></div></li>
+    </ul>
+    <ul type="none" >
+        <li><div style="width:100% ;background: #f2f2f2">基本信息</div></li>
+        <li><div class="pub_div"><span class="red">*</span><span>保险公司</span></div></li>
+        <li><select style="width: 70vw;height: 30px"  ng-model="selectidea" ng-options="ins_company.name for ins_company in ins_companys" ng-change="changeidea(selectidea)" ></select></li>
+        <li><div class="pub_div"><span class="red">*</span><span>产品名称</span></div></li>
+        <li><input style="width: 70vw" type="text" ng-model="cartype.chanpinname"></li>
+        <li><div class="pub_div"><span>交强险</span></div></li>
+        <li><input type="text" ng-model="cartype.jiaoqiang"><span class="red">请用竖线"|"分割</span></li>
+        <li><div style="width:100% ;background: #f2f2f2">商业险险种</div></li>
+        <li><div class="pub_div"><span>机动车损失险</span></div></li>
+        <li><input type="text" ng-model="cartype.jidongche"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>第三者责任险</span></div></li>
+        <li><input type="text" ng-model="cartype.disanzhe"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>全车盗抢险</span></div></li>
+        <li><input type="text" ng-model="cartype.quanchedao"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>主驾座位险</span></div></li>
+        <li><input type="text" ng-model="cartype.zhujiawei"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>乘客座位险</span></div></li>
+        <li><input type="text" ng-model="cartype.chengkewei"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>玻璃破碎险</span></div></li>
+        <li><input type="text" ng-model="cartype.bolisui"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>自燃损失险</span></div></li>
+        <li><input  type="text" ng-model="cartype.ziransun"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>车身划痕损失险</span></div></li>
+        <li><input  type="text"  ng-model="cartype.cheshenhen"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>发动机涉水险</span></div></li>
+        <li><input type="text" ng-model="cartype.fadongjisheshui"><span class="red">请用竖线"|"分割</span></li>
+        <li><div class="pub_div"><span>不计免赔</span></div></li>
+        <li><input type="text" ng-model="cartype.bujimianpei"><span class="red">请用竖线"|"分割</span></li>
+        <!--<li><div class="pub_div"><span class="red">*</span><span>有效期</span></div></li>-->
+        <!--<li><div   style="text-align: left"> 开始<input  type="text"  id="youxiao_star"  style="width: 120px">  结束<input  type="text"  id="youxiao_end"  style="width: 120px"></div></li>-->
+        <li><div class="pub_div"><span class="red">*</span><span>封面</span></div></li>
+        <li>
+            <input type="file" class="uploadimg">
+            <div  id="img"  class="uploaddiv"><img   style="max-width: 400px" src="imgs/open.png" alt="" /></div>
+        </li>
+        <li><div class="pub_div"><span>描述</span></div></li>
+        <li><input  style="width: 70vw" type="text" ng-model="cartype.miaoshu"></li>
+        <li><div class="pub_div"><span class="red">*</span><span>状态</span></div></li>
+        <li><div style="text-align: left;width: 70vw;margin: 0 auto"><input type="radio" name="yes_no"  ng-click="yes_no(0)">无效<input type="radio" name="yes_no" ng-click="yes_no(1)">生效</div></li>
+
+    </ul>
+    <button  class="button_" ng-click="to_creat()">创建</button>
+</div>
+</body>
+</html>

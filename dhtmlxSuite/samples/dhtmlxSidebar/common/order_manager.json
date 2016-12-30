@@ -1,0 +1,8 @@
+{items: [
+	{id: "car_order", text: "汽车订单", icon: "documents.png" ,selected: true },
+	{id: "ins_order", text: "保险订单", icon: "documents.png"},
+	{id: "hdw_order", text: "硬件订单", icon: "documents.png"},
+    {type: "separator"},
+    {id: "foundpullcar_order", text: "寻车/拖车订单", icon: "documents.png"}
+//    {id: "pullcar_order", text: "拖车订单", icon: "documents.png"}
+]}

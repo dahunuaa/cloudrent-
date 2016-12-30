@@ -1,0 +1,8 @@
+{items: [
+	{id: "company", text: "公司介绍", icon: "recent.png", selected: true }
+//	{id: "service", text: "服务项目", icon: "desktop.png"},
+//	{id: "culture", text: "企业文化", icon: "downloads.png"},
+////	{type: "separator"},
+//	{id: "recruit", text: "企业招聘", icon: "documents.png"},
+//	{id: "contact", text: "联系我们", icon: "music.png"}
+]}

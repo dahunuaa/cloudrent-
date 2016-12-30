@@ -1,0 +1,6 @@
+{items: [
+	{id: "car_manager",       text: "汽车商品", icon: "documents.png",selected: true},
+	{id: "insurance_manager", text: "保险商品", icon: "documents.png"},
+    {id: "hardware_manager",  text: "硬件商品", icon: "documents.png"}
+
+]}

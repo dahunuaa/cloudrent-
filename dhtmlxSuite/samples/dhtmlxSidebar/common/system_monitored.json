@@ -1,0 +1,3 @@
+{items: [
+	{id: "company", text: "服务监控", icon: "recent.png", selected: true }
+]}

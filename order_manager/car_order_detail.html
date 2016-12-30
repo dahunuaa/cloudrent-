@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>汽车订单</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/car_order_detail.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl" >
+<h2 style="width:100%;text-align: center;color: #39c;">商品详情</h2>
+<table class="table" >
+    <tr class="single">
+        <td>
+            姓名
+        </td>
+        <td>
+            <div ng-bind="data.contact_name"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            联系方式
+        </td>
+        <td ng-bind="data.contact_mobile"></td>
+    </tr>
+    <tr class="single">
+        <td>
+            价格
+        </td>
+        <td>
+            <div ng-bind="data.should_pay"></div>
+        </td>
+    </tr>
+    <tr >
+        <td>
+            订单编号
+        </td>
+        <td>
+            <div ng-bind="data.order_sn"></div>
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            创建时间
+        </td>
+        <td    ng-bind="data.add_time"></td>
+    </tr>
+    <tr >
+        <td>
+            支付方式
+        </td>
+        <td>
+            <div ng-bind="data.pay_type.desc"></div>
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            支付状态
+        </td>
+        <td ng-bind="data.pay_status.desc"></td>
+    </tr>
+    <tr >
+        <td>
+            订单状态
+        </td>
+        <td>
+            <div ng-bind="data.order_status.desc"></div>
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            商品名称
+        </td>
+        <td ng-bind="data.order_goods[0].goods_name"></td>
+    </tr>
+    <tr >
+        <td>
+            备注信息
+        </td>
+        <td>
+            <div ng-bind="data.remark"></div>
+        </td>
+    </tr>
+</table>
+
+<p style="width: 100%;text-align: center"><button class="btn_blue"  onclick="JavaScript:history.go(-1);">返回</button></p>
+
+</body>
+</html>

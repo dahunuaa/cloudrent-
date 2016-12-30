@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/angular.min.js"></script>
+    <script type="text/javascript" src="dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="js/custom/login.js"></script>
+    <script type="text/javascript" src="js/plugins/basePath.js"></script>
+</head>
+
+
+<body class="loginpage"  ng-app="myApp" ng-controller="myCtrl" >
+    <div class="loginbox">
+        <div class="loginboxinner">
+
+            <div class="logo">
+                <h1 class="logo">后台管理.<span>管理员</span></h1>
+                <span class="slogan">后台管理系统</span>
+            </div>
+            <br clear="all" /><br />
+                <div class="username">
+                    <div class="usernameinner">
+                        <input type="text"  id="phone"  ng-model="user.name">
+                    </div>
+                </div>
+
+                <div class="password">
+                    <div class="passwordinner">
+                        <input type="password"   ng-model="user.password">
+                    </div>
+                </div>
+                <button ng-click="to_login()">登录</button>
+                <!--<div class="keep"><input type="checkbox" /> 记住密码</div>-->
+        </div>
+    </div>
+
+</body>
+</html>

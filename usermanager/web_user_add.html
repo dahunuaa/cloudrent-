@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web_user_add</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../js/custom/web_user_add.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl" >
+<div style="width: 100%;text-align: center;margin-top: 50px"><h3>添加数据</h3></div>
+<div style="width: 100%;">
+    <div style="width: 800px;border: 1px solid #eee;margin: 0 auto;padding: 40px;">
+        <table style="width: 700px;height: 200px;border: 1px solid #eee;">
+            <tr >
+                <td style="border-right: solid 1px #eee;border-bottom: 1px solid #eee" >手机号</td>
+                <td style="border-bottom: 1px solid #eee">
+                    <input ng-model="add_mobile">
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right: solid 1px #eee;border-bottom: 1px solid #eee" >邮箱</td>
+                <td style="border-bottom: 1px solid #eee">
+                    <input ng-model="add_email">
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right: solid 1px #eee">状态</td>
+                <td>
+                    <input ng-model="add_status">
+                </td>
+            </tr>
+        </table>
+        <div style="text-align: center;margin-top: 10px">
+            <button style="width: 100px" ng-click="do_add()">确认</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button style="width: 100px" ng-click="back()">返回</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

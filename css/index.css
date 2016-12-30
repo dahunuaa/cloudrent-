@@ -1,0 +1,31 @@
+div#tabbarObj {
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    width: 97vw;
+    height: 100vh;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.09);
+}
+body{
+    margin: 0;
+}
+
+
+::-webkit-input-placeholder {font-size:12px; /* WebKit browsers */ font-family: "微软雅黑";color:#c8c6c6;}
+:-moz-placeholder { font-size:12px;/* Mozilla Firefox 4 to 18 */font-family: "微软雅黑";color:#c8c6c6;}
+::-moz-placeholder { font-size:12px;/* Mozilla Firefox 19+ */font-family: "微软雅黑";color:#c8c6c6;}
+:-ms-input-placeholder { font-size:12px;/* Internet Explorer 10+ */font-family:"微软雅黑";color:#c8c6c6;}
+.floatl{float:left;}
+.floatr{float: right;}
+.clear{clear:both;margin: 0!important;}
+.yellow{color:#ff9318;}
+.col898989{color: #898989!important;}
+.col3e3a39{color: #3e3a39!important;}
+.colcc0810{color:#cc0810}
+.header{background-color: #0194d9;padding: 10px 0;font-size: 14px;color:#fff;position: fixed;width:100%;z-index: 1}
+.header .inner{width:1000px;margin:0 auto;}
+.nav{margin-left: 131px;margin-top: 25px;}
+.nav li{float:left;margin-right:55px;}
+.nav li a{color: #fff;}
+.copyRight{line-height: 40px;background:#0194d9;color:#fff;text-align: center;font-size: 14px;width:100%;position:absolute;bottom:0;}
+.copyright{color:#3d4c65;font-size: 14px;}

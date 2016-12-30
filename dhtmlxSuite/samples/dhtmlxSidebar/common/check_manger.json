@@ -1,0 +1,9 @@
+{items: [
+	{id: "check_supplier_car", text: "汽车供应商", icon: "recent.png", selected: true },
+	{id: "check_supplier_insurance", text: "保险供应商", icon: "recent.png"},
+	{id: "check_supplier_rentcar", text: "租车供应商", icon: "recent.png"},
+    {id: "check_supplier_hardware", text: "硬件供应商", icon: "recent.png"},
+    {id: "check_supplier_searchcar", text: "寻车供应商", icon: "recent.png"}
+//	{type: "separator"},
+
+]}

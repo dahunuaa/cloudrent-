@@ -1,0 +1,7 @@
+{items: [
+	{id: "recent", text: "用户管理", icon: "recent.png", selected: true }
+//	{id: "desktop", text: "后台用户", icon: "desktop.png"},
+
+//	{type: "separator"}
+
+]}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>审核——审核页</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/check_page.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl" >
+
+<h2 style="width:90vw;text-align: center;color: #39c;">查看资料</h2>
+<table style="width: 90vw;margin:  0 auto">
+    <tr>
+        <td><button class="btn_blue" style="float: right"  onclick="JavaScript:history.go(-1);">返回</button></td>
+    </tr>
+</table>
+<table class="table" >
+    <tr class="single">
+        <td>
+            申请类型
+        </td>
+        <td>
+            <div ng-bind="data.type.desc"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            资料
+        </td>
+        <td style="text-align: center">
+            <img ng-src="{{data.corporation_card}}">
+            <br>
+            <img ng-src="{{data.business_card}}">
+            <br>
+            <img ng-src="{{data.tax_card}}">
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            审核意见
+        </td>
+        <td>
+            <input type="text" style="width: 60vw;border-radius: 5px;height: 40px" ng-model="user.advice">
+        </td>
+    </tr>
+</table>
+
+
+<table style="width: 90vw">
+    <tr style="text-align: center">
+        <td><button class="btn_blue"  ng-click="pass()">通  过</button></td>
+        <td><button class="btn_blue"  ng-click="nopass()">不通过</button></td>
+    </tr>
+</table>
+<br>
+</body>
+</html>

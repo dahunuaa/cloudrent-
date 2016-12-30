@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <!--<link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/custom/tianjia_user.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl" >
+<h3 style="width: 100%;text-align: center">添加用户</h3>
+
+<div class="public">
+    <table class="tab_user">
+        <tr class="single">
+            <td class="td_left"><span class="red">*</span></span>手机号</td>
+            <td><input  style="width: 300px" type="text" ng-model="user.mobile"  id="tianjia_mobile"></td>
+        </tr>
+        <tr>
+            <td class="td_left"><span class="red">*</span>密码</td>
+            <td><input  type="password" style="width: 300px;border-radius: 5px;height: 3vh;border:1px solid #ccc ;"  ng-model="user.password"></td>
+        </tr>
+        <tr class="single">
+            <td class="td_left"><span class="red">*</span>确认密码</td>
+            <td><input  type="password" style="width: 300px;border-radius: 5px;height: 3vh;border:1px solid #ccc ;"  ng-model="user.repassword"></td>
+        </tr>
+        <tr>
+            <td class="td_left"><span class="red">*</span>邮箱</td>
+            <td><input style="width: 300px"  type="text"  ng-model="user.email" id="email"></td>
+        </tr>
+    </table>
+    <button class="btn_blue" ng-click="to_tianjia()">添加</button>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <button class="btn_blue" onclick="JavaScript:history.go(-1);">返回</button>
+</div>
+</body>
+</html>
